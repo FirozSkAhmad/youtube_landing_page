@@ -66,3 +66,8 @@
 .channel-name {
   margin-bottom: 4px;
 }
+
+.text-link{
+  color: inherit;
+  text-decoration: inherit;
+}

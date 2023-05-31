@@ -7,6 +7,7 @@ import "./general.css"
 import "./header.css"
 import "./sidebar.css"
 import "./gridCon.css"
+import {createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 
 const App = () => {
@@ -14,11 +15,18 @@ const App = () => {
         <>
             <Header />
             <Sidebar />
-            <VideosCon/>
+            <VideosCon />
         </>
     )
 }
 
+const appRouter = createBrowserRouter([
+    {
+        element: <App />,
+        path: "/"
+    }
+])
+
 const root = ReactDom.createRoot(document.getElementById("root"))
 
-root.render(<App />)
+root.render(<RouterProvider router={appRouter} />)
